@@ -1,0 +1,10 @@
+name: fourth github-action
+on:
+  workflow_dispatch
+jobs:
+  a-job:
+    runs-on: ubuntu-latest
+  steps:
+      - name: Run Python
+       run: |
+        python3 -c "print('Hello from Python')"
