@@ -1,0 +1,16 @@
+name: fifth github-action
+
+on:
+  workflow_dispatch
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: show time
+        run: date
+      - name: os runner
+        run: echo "$RUNNER_OS"
+      - name: github repo
+        run: echo "${{ github.repository }}"
