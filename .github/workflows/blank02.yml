@@ -1,0 +1,11 @@
+name: third github-action
+on:
+  workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    env:
+      name: Aditya
+    steps:
+      - name: Print variable
+        run: echo "Hello $name"
