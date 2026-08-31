@@ -1,0 +1,17 @@
+name: Multiple Job Practice
+on: 
+  workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building application"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo"Running tests"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying application"
+    
