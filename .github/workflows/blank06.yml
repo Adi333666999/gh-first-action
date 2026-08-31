@@ -9,7 +9,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo"Running tests"
+      - run: echo "Running tests"
   deploy:
     runs-on: ubuntu-latest
     steps:
