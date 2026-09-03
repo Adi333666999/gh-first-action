@@ -7,8 +7,7 @@ on:
   
 jobs:
   build:
-    runs-on:
-      ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: print date
         run: date
@@ -26,15 +25,13 @@ jobs:
         run: echo "Event: ${{ github.event_name }}"
   test:
     needs: build
-    runs-on: 
-      ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Testing ..."
 
   deploy:
     needs: test
-    runs-on: 
-      ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Deploying ..."
     
