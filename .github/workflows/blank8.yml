@@ -1,0 +1,25 @@
+name: Mixed Workflow
+on:
+  workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Building"
+  test-linux:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Testing on Linux"
+  test-windows:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Testing on Windows"
+  deploy:
+    needs: [test-linux, test-windows]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying"
+
+      
