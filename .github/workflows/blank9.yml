@@ -13,16 +13,16 @@ jobs:
         run: date
     
       - name: print runner OS
-        run: echo "Runner OS: $RUNNER_OS" 
+        run: 'echo "Runner OS: $RUNNER_OS"'
         
       - name: repo name
-        run: echo "Repo: ${{ github.repository }}"
+        run: 'echo "Repo: ${{ github.repository }}"'
         
       - name: actor
-        run: echo "Actor: ${{ github.actor }}"
+        run: 'echo "Actor: ${{ github.actor }}"'
         
       - name: event name
-        run: echo "Event: ${{ github.event_name }}"
+        run: 'echo "Event: ${{ github.event_name }}"'
   test:
     needs: build
     runs-on: ubuntu-latest
