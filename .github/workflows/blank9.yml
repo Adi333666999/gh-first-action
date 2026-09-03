@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: print date
         run: date
-    steps:
+    
       - name: print runner OS
         run: echo "Runner OS: $RUNNER_OS" 
         
