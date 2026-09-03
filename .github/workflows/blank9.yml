@@ -1,0 +1,41 @@
+name: basic assignments
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  
+jobs:
+  build:
+    runs-on:
+      ubuntu-latest
+    steps:
+      - name: print date
+        run: date
+    steps:
+      - name: print runner OS
+        run: echo "Runner OS: $RUNNER_OS" 
+        
+      - name: repo name
+        run: echo "Repo: ${{ github.repository }}"
+        
+      - name: actor
+        run: echo "Actor: ${{ github.actor }}"
+        
+      - name: event name
+        run: echo "Event: ${{ github.event_name }}"
+  test:
+    needs: build
+    runs-on: 
+      ubuntu-latest
+    steps:
+      - run: echo "Testing ..."
+
+  deploy:
+    needs: test
+    runs-on: 
+      ubuntu-latest
+    steps:
+      - run: echo "Deploying ..."
+    
+  
