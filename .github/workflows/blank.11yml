@@ -1,0 +1,19 @@
+name: secret practice
+on:
+  workflow_dispatch
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+  steps:
+    - name: read secret
+      run: echo ${{ secrets.MY_PASSWORD }}
+
+
+
+
+
+
+
+
+
+      
