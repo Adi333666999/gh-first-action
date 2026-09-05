@@ -1,0 +1,16 @@
+name: env practice
+on: 
+  workflow_dispatch
+env:
+  name: Aditya
+  role: Devops engineer
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print variable
+        run: |
+          echo "Name: $name"
+          echo "Role: $role"
+    
+  
